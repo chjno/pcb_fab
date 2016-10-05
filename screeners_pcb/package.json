@@ -1,0 +1,23 @@
+{
+  "name": "screeners_pcb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chjno/pcb_fab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chjno/pcb_fab/issues"
+  },
+  "homepage": "https://github.com/chjno/pcb_fab#readme",
+  "dependencies": {
+    "noble": "^1.7.0",
+    "osc": "^2.1.0"
+  }
+}
