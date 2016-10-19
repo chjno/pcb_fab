@@ -1,5 +1,6 @@
 var noble = require('noble');
 var osc = require('osc');
+var fs = require('fs');
 
 noble.on('stateChange', function(state) {
   if (state === 'poweredOn') {
@@ -7,13 +8,19 @@ noble.on('stateChange', function(state) {
     console.log('scanning...');
   } else {
     noble.stopScanning();
-    console.log('not scanning...');
+    console.log('bluetooth isn\'t on...');
   }
 });
 
 noble.on('discover', function(peripheral) {
-  var uuid = '6e57d0876e3d451e923c8909995031fc';
-  if (peripheral.id === uuid || peripheral.address === uuid) {
+  // console.log(peripheral);
+  // console.log('');
+  // console.log('');
+  // console.log('');
+  // var uuid = '6e57d0876e3d451e923c8909995031fc';
+  var uuid = 'e3533e63915b42e096f1d7f67e82f991';
+  var mac = 'ee:35:1e:9c:76:cc';
+  if (peripheral.id === uuid || peripheral.uuid === uuid || peripheral.address === mac) {
     console.log('found RFchino');
     noble.stopScanning();
 
